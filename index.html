@@ -2013,6 +2013,60 @@
                                         transform: translateY(-2px);
                                     }
 
+                                    /* Switcher de imagens */
+                                    .image-switcher {
+                                        margin-top: 24px;
+                                        display: flex;
+                                        justify-content: center;
+                                        gap: 12px;
+                                        flex-wrap: wrap;
+                                    }
+
+                                    .switcher-btn {
+                                        background: rgba(255,255,255,0.08);
+                                        border: 2px solid rgba(255,193,7,0.35);
+                                        border-radius: 14px;
+                                        padding: 6px 8px 4px;
+                                        cursor: pointer;
+                                        transition: all 0.25s ease;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        gap: 4px;
+                                    }
+
+                                    .switcher-btn img {
+                                        width: 52px;
+                                        height: 80px;
+                                        object-fit: cover;
+                                        border-radius: 8px;
+                                        pointer-events: none;
+                                    }
+
+                                    .switcher-btn span {
+                                        font-size: 0.65rem;
+                                        color: #ccc;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.04em;
+                                    }
+
+                                    .switcher-btn:hover,
+                                    .switcher-btn.active {
+                                        border-color: #FFC107;
+                                        background: rgba(255,193,7,0.15);
+                                        transform: translateY(-3px);
+                                        box-shadow: 0 4px 16px rgba(255,193,7,0.25);
+                                    }
+
+                                    .switcher-btn.active span {
+                                        color: #FFC107;
+                                    }
+
+                                    .mobile-image {
+                                        transition: opacity 0.35s ease;
+                                    }
+
                                     /* Home indicator do iPhone */
 
                                     .home-indicator {
@@ -2134,7 +2188,7 @@
 
                                             <div class="iphone-screen" id="iphoneScreen">
                                                 <img decoding="async"
-                                                    src="https://res.cloudinary.com/dmfvayiyh/image/upload/v1754415632/regtr_gmamno.png"
+                                                    src="/wp-content/uploads/2025/06/bruno.png"
                                                     alt="Preview da página mobile no iPhone 14 Plus"
                                                     class="mobile-image" id="mobileImage">
                                             </div>
@@ -2153,11 +2207,31 @@
                                         <button class="control-btn" onclick="scrollToBottom()">⬇️ Final</button>
                                     </div>
 
+                                    <div class="image-switcher" id="imageSwitcher">
+                                        <button class="switcher-btn active" onclick="switchImage('/wp-content/uploads/2025/06/bruno.png', this)">
+                                            <img src="/wp-content/uploads/2025/06/bruno.png" alt="Bruno" loading="lazy">
+                                            <span>Bruno</span>
+                                        </button>
+                                        <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/cookies.png', this)">
+                                            <img src="/wp-content/uploads/2025/06/cookies.png" alt="Cookies" loading="lazy">
+                                            <span>Cookies</span>
+                                        </button>
+                                        <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/editor.png', this)">
+                                            <img src="/wp-content/uploads/2025/06/editor.png" alt="Editor" loading="lazy">
+                                            <span>Editor</span>
+                                        </button>
+                                        <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/player.png', this)">
+                                            <img src="/wp-content/uploads/2025/06/player.png" alt="Player" loading="lazy">
+                                            <span>Player</span>
+                                        </button>
+                                    </div>
+
                                 </section>
 
                                 <script>
                                     const iphoneScreen = document.getElementById('iphoneScreen');
                                     const scrollIndicator = document.querySelector('.scroll-indicator');
+                                    const mobileImage = document.getElementById('mobileImage');
 
                                     // Esconder indicador após primeiro scroll
                                     iphoneScreen.addEventListener('scroll', function () {
@@ -2191,6 +2265,23 @@
                                             top: iphoneScreen.scrollHeight,
                                             behavior: 'smooth'
                                         });
+                                    }
+
+                                    // Troca de imagem com fade
+                                    function switchImage(src, btn) {
+                                        // Remove active de todos os botões
+                                        document.querySelectorAll('.switcher-btn').forEach(function(b) {
+                                            b.classList.remove('active');
+                                        });
+                                        btn.classList.add('active');
+
+                                        // Fade out → troca → fade in
+                                        mobileImage.style.opacity = '0';
+                                        setTimeout(function() {
+                                            mobileImage.src = src;
+                                            iphoneScreen.scrollTo({ top: 0 });
+                                            mobileImage.style.opacity = '1';
+                                        }, 320);
                                     }
 
                                     // Smooth scroll touch simulation
