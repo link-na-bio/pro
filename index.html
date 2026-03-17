@@ -2024,8 +2024,8 @@
 
                                     .switcher-nav-btn {
                                         display: none;
-                                        background: rgba(255,193,7,0.15);
-                                        border: 2px solid rgba(255,193,7,0.4);
+                                        background: rgba(255, 193, 7, 0.15);
+                                        border: 2px solid rgba(255, 193, 7, 0.4);
                                         border-radius: 50%;
                                         width: 34px;
                                         height: 34px;
@@ -2037,8 +2037,9 @@
                                         flex-shrink: 0;
                                         transition: all 0.2s ease;
                                     }
+
                                     .switcher-nav-btn:hover {
-                                        background: rgba(255,193,7,0.3);
+                                        background: rgba(255, 193, 7, 0.3);
                                     }
 
                                     .image-switcher {
@@ -2050,8 +2051,8 @@
                                     }
 
                                     .switcher-btn {
-                                        background: rgba(255,255,255,0.08);
-                                        border: 2px solid rgba(255,193,7,0.35);
+                                        background: rgba(255, 255, 255, 0.08);
+                                        border: 2px solid rgba(255, 193, 7, 0.35);
                                         border-radius: 14px;
                                         padding: 6px 8px 4px;
                                         cursor: pointer;
@@ -2081,9 +2082,9 @@
                                     .switcher-btn:hover,
                                     .switcher-btn.active {
                                         border-color: #FFC107;
-                                        background: rgba(255,193,7,0.15);
+                                        background: rgba(255, 193, 7, 0.15);
                                         transform: translateY(-3px);
-                                        box-shadow: 0 4px 16px rgba(255,193,7,0.25);
+                                        box-shadow: 0 4px 16px rgba(255, 193, 7, 0.25);
                                     }
 
                                     .switcher-btn.active span {
@@ -2098,11 +2099,13 @@
                                         .switcher-nav-btn {
                                             display: flex;
                                         }
+
                                         .image-switcher {
                                             flex-wrap: nowrap;
                                             gap: 10px;
                                             overflow: visible;
                                         }
+
                                         .switcher-btn.hidden-mobile {
                                             display: none;
                                         }
@@ -2226,8 +2229,7 @@
                                             <div class="power-button"></div>
 
                                             <div class="iphone-screen" id="iphoneScreen">
-                                                <img decoding="async"
-                                                    src="/wp-content/uploads/2025/06/cookies.png"
+                                                <img decoding="async" src="/wp-content/uploads/2025/06/cookies.png"
                                                     alt="Preview da página mobile no iPhone 14 Plus"
                                                     class="mobile-image" id="mobileImage">
                                             </div>
@@ -2242,28 +2244,42 @@
 
 
                                     <div class="image-switcher-wrapper">
-                                        <button class="switcher-nav-btn" id="prevBtn" onclick="slideSwitcher(-1)">&#8249;</button>
+                                        <button class="switcher-nav-btn" id="prevBtn"
+                                            onclick="slideSwitcher(-1)">&#8249;</button>
                                         <div class="image-switcher" id="imageSwitcher">
-                                            <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/bruno.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/bruno.png" alt="Bruno" loading="lazy">
+                                            <button class="switcher-btn"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/bruno.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/bruno.png" alt="Bruno"
+                                                    loading="lazy">
                                             </button>
-                                            <button class="switcher-btn active" onclick="switchImage('/wp-content/uploads/2025/06/cookies.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/cookies.png" alt="Cookies" loading="lazy">
+                                            <button class="switcher-btn active"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/cookies.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/cookies.png" alt="Cookies"
+                                                    loading="lazy">
                                             </button>
-                                            <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/editor.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/editor.png" alt="Editor" loading="lazy">
+                                            <button class="switcher-btn"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/editor.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/editor.png" alt="Editor"
+                                                    loading="lazy">
                                             </button>
-                                            <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/player.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/player.png" alt="Player" loading="lazy">
+                                            <button class="switcher-btn"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/player.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/player.png" alt="Player"
+                                                    loading="lazy">
                                             </button>
-                                            <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/Barbearia.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/Barbearia.png" alt="Barbearia" loading="lazy">
+                                            <button class="switcher-btn"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/Barbearia.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/Barbearia.png" alt="Barbearia"
+                                                    loading="lazy">
                                             </button>
-                                            <button class="switcher-btn" onclick="switchImage('/wp-content/uploads/2025/06/Filmaker.png', this)">
-                                                <img src="/wp-content/uploads/2025/06/Filmaker.png" alt="Filmaker" loading="lazy">
+                                            <button class="switcher-btn"
+                                                onclick="switchImage('/wp-content/uploads/2025/06/Filmaker.png', this)">
+                                                <img src="/wp-content/uploads/2025/06/Filmaker.png" alt="Filmaker"
+                                                    loading="lazy">
                                             </button>
                                         </div>
-                                        <button class="switcher-nav-btn" id="nextBtn" onclick="slideSwitcher(1)">&#8250;</button>
+                                        <button class="switcher-nav-btn" id="nextBtn"
+                                            onclick="slideSwitcher(1)">&#8250;</button>
                                     </div>
 
                                 </section>
@@ -2310,14 +2326,14 @@
                                     // Troca de imagem com fade
                                     function switchImage(src, btn) {
                                         // Remove active de todos os botões
-                                        document.querySelectorAll('.switcher-btn').forEach(function(b) {
+                                        document.querySelectorAll('.switcher-btn').forEach(function (b) {
                                             b.classList.remove('active');
                                         });
                                         btn.classList.add('active');
 
                                         // Fade out → troca → fade in
                                         mobileImage.style.opacity = '0';
-                                        setTimeout(function() {
+                                        setTimeout(function () {
                                             mobileImage.src = src;
                                             iphoneScreen.scrollTo({ top: 0 });
                                             mobileImage.style.opacity = '1';
@@ -2332,7 +2348,7 @@
                                         if (window.innerWidth > 480) return;
                                         var btns = document.querySelectorAll('.switcher-btn');
                                         var total = btns.length;
-                                        btns.forEach(function(b, i) {
+                                        btns.forEach(function (b, i) {
                                             if (i >= switcherOffset && i < switcherOffset + MOBILE_VISIBLE) {
                                                 b.classList.remove('hidden-mobile');
                                             } else {
@@ -2351,9 +2367,9 @@
 
                                     // Inicializa carrossel ao carregar e ao redimensionar
                                     updateMobileCarousel();
-                                    window.addEventListener('resize', function() {
+                                    window.addEventListener('resize', function () {
                                         if (window.innerWidth > 480) {
-                                            document.querySelectorAll('.switcher-btn').forEach(function(b) {
+                                            document.querySelectorAll('.switcher-btn').forEach(function (b) {
                                                 b.classList.remove('hidden-mobile');
                                             });
                                         } else {
@@ -3205,7 +3221,7 @@
                                             </div>
 
                                             <div class="entry-price-container">
-                                                <div class="current-price">R$ 197</div>
+                                                <div class="current-price">R$ 97</div>
                                             </div>
 
                                             <div class="monthly-section">
